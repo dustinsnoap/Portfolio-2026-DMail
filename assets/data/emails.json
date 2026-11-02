@@ -1,0 +1,314 @@
+{
+    "emails": {
+        "demo-welcome": {
+            "id": "demo-welcome",
+            "threadId": "demo-introduction",
+            "folder": "primary",
+            "timestamp": "2026-10-14T14:30:00Z",
+            "from": {
+                "name": "{{OWNER_NAME}}",
+                "email": "owner@example.invalid",
+                "avatar": "img/me.jpg"
+            },
+            "to": {
+                "name": "you",
+                "email": ""
+            },
+            "data": {
+                "subject": "You probably have some questions.",
+                "format": "text",
+                "body": "This is DMail: a portfolio arranged as an inbox. The messages here are samples so you can explore without connecting to a server.\n\nBrowse Projects, Writing, and Updates. Search a phrase, star a conversation, or change the appearance in Settings. Opening this message also delivers a follow-up.\n\nThe live portfolio is at https://dustinsnoap.com/.\n\n{{OWNER_NAME}}"
+            },
+            "status": {
+                "read": false,
+                "starred": false,
+                "deleted": false
+            },
+            "labels": [],
+            "receivedAt": "firstVisit"
+        },
+        "demo-followup": {
+            "id": "demo-followup",
+            "threadId": "demo-followup",
+            "folder": "primary",
+            "timestamp": "2026-10-14T14:30:00Z",
+            "from": {
+                "name": "{{OWNER_NAME}}",
+                "email": "owner@example.invalid",
+                "avatar": "img/me.jpg"
+            },
+            "to": {
+                "name": "you",
+                "email": ""
+            },
+            "data": {
+                "subject": "One last thing",
+                "format": "text",
+                "body": "Compose and Reply work in this demo. Messages, attachments, and mailbox choices stay in this browser; nothing is delivered. Unsent drafts stay in the current page until you reload.\n\nThe live version adds private conversations, accounts, and cross-device saving.\n\n{{OWNER_NAME}}"
+            },
+            "status": {
+                "read": false,
+                "starred": false,
+                "deleted": false
+            },
+            "labels": [],
+            "delivery": {
+                "afterOpen": "demo-welcome"
+            }
+        },
+        "demo-norris": {
+            "id": "demo-norris",
+            "threadId": "demo-norris",
+            "folder": "primary",
+            "timestamp": "2026-10-14T14:30:00Z",
+            "from": {
+                "name": "{{CHATBOT_NAME}}",
+                "email": "",
+                "avatar": "img/chatbot.jpg"
+            },
+            "to": {
+                "name": "you",
+                "email": ""
+            },
+            "data": {
+                "subject": "A brief introduction from Norris",
+                "format": "text",
+                "body": "I am Norris. On the live site I can answer questions about the projects and work history behind the portfolio.\n\nThis is a sample message, rather than a generated answer. The demo keeps its conversations in your browser and makes no requests to an AI service.\n\nFeel free to reply here to try the editor. For an actual conversation with me, visit https://dustinsnoap.com/."
+            },
+            "status": {
+                "read": false,
+                "starred": false,
+                "deleted": false
+            },
+            "labels": [
+                "Demo"
+            ],
+            "receivedAt": "firstVisit"
+        },
+        "demo-project": {
+            "id": "demo-project",
+            "threadId": "th-022",
+            "folder": "projects",
+            "timestamp": "2026-10-14T14:30:00Z",
+            "from": {
+                "name": "{{OWNER_NAME}}",
+                "email": "owner@example.invalid",
+                "avatar": "img/me.jpg"
+            },
+            "to": {
+                "name": "you",
+                "email": ""
+            },
+            "data": {
+                "subject": "A portfolio, delivered as an inbox",
+                "format": "text",
+                "body": "The frontend uses HTML, CSS, and native JavaScript modules. Search, rendering, state, and persistence have separate responsibilities.\n\nTry starring this conversation, assigning a label, or opening it beside the list with a reading pane. Changes affect your own browser view.\n\nThe bundled assets supply the icons, fonts, photos, and sample catalogs. A private backend powers the live site’s accounts, delivery, and assistant replies.\n\n{{OWNER_NAME}}"
+            },
+            "status": {
+                "read": false,
+                "starred": false,
+                "deleted": false
+            },
+            "labels": [
+                "Demo",
+                "JavaScript"
+            ]
+        },
+        "demo-update-0": {
+            "id": "demo-update-0",
+            "threadId": "th-010",
+            "folder": "updates",
+            "timestamp": "2026-10-01T15:00:00Z",
+            "from": {
+                "name": "{{OWNER_NAME}}",
+                "email": "owner@example.invalid",
+                "avatar": "img/me.jpg"
+            },
+            "to": {
+                "name": "you",
+                "email": ""
+            },
+            "data": {
+                "subject": "Putting an inbox together",
+                "format": "text",
+                "body": "A small beginning\n\nThe inbox shell is in place. Each piece of work has a subject and somewhere for the details.\n\n{{OWNER_NAME}}"
+            },
+            "status": {
+                "read": false,
+                "starred": false,
+                "deleted": false
+            },
+            "labels": [
+                "Demo"
+            ]
+        },
+        "demo-update-1": {
+            "id": "demo-update-1",
+            "threadId": "th-010",
+            "folder": "updates",
+            "timestamp": "2026-10-02T15:00:00Z",
+            "from": {
+                "name": "{{OWNER_NAME}}",
+                "email": "owner@example.invalid",
+                "avatar": "img/me.jpg"
+            },
+            "to": {
+                "name": "you",
+                "email": ""
+            },
+            "data": {
+                "subject": "Putting an inbox together",
+                "format": "text",
+                "body": "A better way to find things\n\nSearch now works across message bodies, with filters for dates, people, labels, and attachments.\n\n{{OWNER_NAME}}"
+            },
+            "status": {
+                "read": false,
+                "starred": false,
+                "deleted": false
+            },
+            "labels": [
+                "Demo"
+            ]
+        },
+        "demo-update-2": {
+            "id": "demo-update-2",
+            "threadId": "th-010",
+            "folder": "updates",
+            "timestamp": "2026-10-03T15:00:00Z",
+            "from": {
+                "name": "{{OWNER_NAME}}",
+                "email": "owner@example.invalid",
+                "avatar": "img/me.jpg"
+            },
+            "to": {
+                "name": "you",
+                "email": ""
+            },
+            "data": {
+                "subject": "Putting an inbox together",
+                "format": "text",
+                "body": "Making room for conversation\n\nCompose and Reply share an editor. Formatting, links, photos, and attachments belong to the same workflow.\n\n{{OWNER_NAME}}"
+            },
+            "status": {
+                "read": false,
+                "starred": false,
+                "deleted": false
+            },
+            "labels": [
+                "Demo"
+            ]
+        },
+        "demo-update-3": {
+            "id": "demo-update-3",
+            "threadId": "th-010",
+            "folder": "updates",
+            "timestamp": "2026-10-04T15:00:00Z",
+            "from": {
+                "name": "{{OWNER_NAME}}",
+                "email": "owner@example.invalid",
+                "avatar": "img/me.jpg"
+            },
+            "to": {
+                "name": "you",
+                "email": ""
+            },
+            "data": {
+                "subject": "Putting an inbox together",
+                "format": "text",
+                "body": "Reading at your own pace\n\nThemes, font choices, text size, spacing, and reading-pane positions are adjustable.\n\n{{OWNER_NAME}}"
+            },
+            "status": {
+                "read": false,
+                "starred": false,
+                "deleted": false
+            },
+            "labels": [
+                "Demo"
+            ]
+        },
+        "demo-update-4": {
+            "id": "demo-update-4",
+            "threadId": "th-010",
+            "folder": "updates",
+            "timestamp": "2026-10-05T15:00:00Z",
+            "from": {
+                "name": "{{OWNER_NAME}}",
+                "email": "owner@example.invalid",
+                "avatar": "img/me.jpg"
+            },
+            "to": {
+                "name": "you",
+                "email": ""
+            },
+            "data": {
+                "subject": "Putting an inbox together",
+                "format": "text",
+                "body": "A longer conversation\n\nThis fifth update folds the middle of the thread. Click the numbered divider to reveal its history.\n\n{{OWNER_NAME}}"
+            },
+            "status": {
+                "read": false,
+                "starred": false,
+                "deleted": false
+            },
+            "labels": [
+                "Demo"
+            ]
+        },
+        "demo-update-5": {
+            "id": "demo-update-5",
+            "threadId": "th-010",
+            "folder": "updates",
+            "timestamp": "2026-10-06T15:00:00Z",
+            "from": {
+                "name": "{{OWNER_NAME}}",
+                "email": "owner@example.invalid",
+                "avatar": "img/me.jpg"
+            },
+            "to": {
+                "name": "you",
+                "email": ""
+            },
+            "data": {
+                "subject": "Putting an inbox together",
+                "format": "text",
+                "body": "Ready to explore\n\nThe browser demo is ready. These updates are sample content, and the live site has its own stories to tell.\n\n{{OWNER_NAME}}"
+            },
+            "status": {
+                "read": false,
+                "starred": false,
+                "deleted": false
+            },
+            "labels": [
+                "Demo"
+            ]
+        },
+        "demo-draft": {
+            "id": "demo-draft",
+            "threadId": "demo-draft",
+            "folder": "drafts",
+            "timestamp": "2026-10-14T14:30:00Z",
+            "from": {
+                "name": "{{OWNER_NAME}}",
+                "email": "owner@example.invalid",
+                "avatar": "img/me.jpg"
+            },
+            "to": {
+                "name": "you",
+                "email": ""
+            },
+            "data": {
+                "subject": "Something still taking shape",
+                "format": "text",
+                "body": "An unfinished project can have a conversation too. This is a sample draft entry, separate from the temporary drafts you write in Compose."
+            },
+            "status": {
+                "read": false,
+                "starred": false,
+                "deleted": false
+            },
+            "labels": [
+                "Ideas"
+            ]
+        }
+    }
+}

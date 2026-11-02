@@ -1,0 +1,79 @@
+<header class="topbar">
+    <div class="topbar-left">
+        <button type="button" class="menu-toggle" aria-label="Navigation menu" aria-controls="mail-navigation" aria-expanded="false">
+            <svg class="hamburger">
+                <use href="/api/portfolio/assets/img/sprites.svg#icon-hamburger" />
+            </svg>
+        </button>
+        <button type="button" class="logo" data-home aria-label="DMail — return to Primary">
+            <svg viewBox="0 0 90 100">
+                <use href="/api/portfolio/assets/img/sprites.svg#dmail-logo" />
+            </svg>
+            <span>mail</span>
+        </button>
+    </div>
+    <div class="topbar-center">
+        <form class="searchbar" role="search" aria-label="Search mail">
+            <button class="icon magnifying-glass" type="submit" aria-label="Search">
+                <svg>
+                    <use href="/api/portfolio/assets/img/sprites.svg#icon-search" />
+                </svg>
+            </button>
+            <input
+                id="search"
+                class="searchbox"
+                type="text"
+                placeholder="Search mail"
+                aria-label="Search mail"
+                aria-describedby="search-scope search-status"
+                maxlength="500"
+                autocomplete="off"
+            />
+            <button class="icon search-clear" type="button" aria-label="Clear search" hidden>×</button>
+            <button class="icon settings" type="button" aria-label="Search options" aria-expanded="false" aria-controls="search-options">
+                <svg>
+                    <use href="/api/portfolio/assets/img/sprites.svg#icon-settings" />
+                </svg>
+            </button>
+        </form>
+        <form id="search-options" class="search-options" aria-label="Search options" hidden>
+            <div class="search-options-header"><h2>Search options</h2>
+                <button type="button" class="search-options-close" aria-label="Close search options">×</button></div>
+            <p id="search-scope" class="search-scope">Search only in Primary.</p>
+            <p class="search-options-error" role="alert"></p>
+        </form>
+    </div>
+    <div class="topbar-right">
+        <button
+            class="icon info"
+            type="button"
+            aria-label="About {{OWNER_NAME}}"
+            aria-haspopup="dialog"
+            popovertarget="about-panel"
+            title="About this portfolio"
+        >
+            <svg aria-hidden="true">
+                <use href="/api/portfolio/assets/img/sprites.svg#icon-info" />
+            </svg>
+        </button>
+        <button
+            class="icon portfolio-settings"
+            type="button"
+            data-open-settings
+            aria-label="Settings"
+            aria-controls="portfolio-settings"
+            title="Settings"
+        >
+            <svg aria-hidden="true"><use href="/api/portfolio/assets/img/sprites.svg#icon-gear" /></svg>
+        </button>
+        <button class="icon links" type="button" aria-label="Apps (coming soon)" title="Apps (coming soon)" disabled>
+            <svg>
+                <use href="/api/portfolio/assets/img/sprites.svg#icon-grid" />
+            </svg>
+        </button>
+        <button class="icon profile" type="button" aria-label="Account options" aria-haspopup="dialog"
+            popovertarget="account-panel" title="Account options">
+            <span data-account-avatar aria-hidden="true">G</span>
+        </button>
+    </div>
+</header>

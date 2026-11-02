@@ -1,0 +1,15 @@
+{
+    "name": "dmail",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "check": "node tools/check-source.cjs",
+        "lint": "eslint",
+        "start": "node tools/dev-server.cjs"
+    },
+    "devDependencies": {
+        "@stylistic/eslint-plugin": "^5.10.0",
+        "eslint": "^10.13.0",
+        "eslint-plugin-simple-import-sort": "^12.1.1"
+    }
+}

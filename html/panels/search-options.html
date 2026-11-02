@@ -1,0 +1,34 @@
+<div class="search-options-header">
+    <h2>Search options</h2>
+    <button type="button" class="search-options-close" aria-label="Close search options">×</button>
+</div>
+<p id="search-scope" class="search-scope">Search only in Primary.</p>
+<label>Words or operators<input name="query" maxlength="500" placeholder='e.g. portfolio OR "backend engineer"' /></label>
+<div class="search-fields">
+    <label>From<input name="from" maxlength="254" /></label>
+    <label>To<input name="to" maxlength="254" /></label>
+</div>
+<label>Subject contains<input name="subject" maxlength="200" /></label>
+<label>Exclude phrase<input name="exclude" maxlength="200" /></label>
+<div class="search-fields">
+    <label>On or after<input name="after" type="date" /></label>
+    <label>Before<input name="before" type="date" /></label>
+</div>
+<div class="search-fields">
+    <label
+        >Status<select name="status">
+            <option value="">Any status</option>
+            <option value="unread">Unread</option>
+            <option value="read">Read</option>
+            <option value="starred">Starred</option>
+        </select></label
+    >
+    <label class="search-photo"><input name="photo" type="checkbox" />Has photo</label>
+</div>
+<p class="search-help">
+    Use from:, to:, cc:, bcc:, subject:, body:, is:, has:photo, has:attachment, filename:, label:, after:, before:, category:,
+    or in:. Quotes match a phrase; - excludes; OR and parentheses combine terms. A matching message returns its conversation.
+    Filters stay within the current view.
+</p>
+<p class="search-options-error" role="alert"></p>
+<button class="search-apply" type="submit">Search</button>

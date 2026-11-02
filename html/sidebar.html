@@ -1,0 +1,69 @@
+<aside class="sidebar" id="mail-navigation" aria-label="Mail navigation">
+    <div class="compose">
+        <button class="button" aria-label="Compose">
+            <div class="icon">
+                <svg viewBox="0 0 64 64" style="border: 1px solid none">
+                    <use href="/api/portfolio/assets/img/sprites.svg#icon-pencil" />
+                </svg>
+            </div>
+            <span>Compose</span>
+        </button>
+    </div>
+    <div class="nav">
+        <button type="button" class="link active" data-folder="primary" aria-label="Inbox" aria-current="page">
+            <svg class="icon">
+                <use href="/api/portfolio/assets/img/sprites.svg#icon-inbox-active" />
+            </svg>
+            <span class="title">Inbox</span>
+            <span class="unread-count" hidden></span>
+        </button>
+        <button type="button" class="link" data-folder="starred" aria-label="Starred">
+            <svg class="icon" aria-hidden="true"><use href="/api/portfolio/assets/img/sprites.svg#icon-star-inactive" /></svg>
+            <span class="title">Starred</span>
+        </button>
+        <button type="button" class="link" data-folder="sent" aria-label="Sent">
+            <svg class="icon">
+                <use href="/api/portfolio/assets/img/sprites.svg#icon-sent" />
+            </svg>
+            <span class="title">Sent</span>
+            <span class="unread-count" hidden></span>
+        </button>
+        <button type="button" class="link" data-folder="drafts" aria-label="Drafts">
+            <svg class="icon">
+                <use href="/api/portfolio/assets/img/sprites.svg#icon-drafts" />
+            </svg>
+            <span class="title">Drafts</span>
+        </button>
+        <button type="button" class="link toggle" aria-expanded="false" aria-controls="more-folders">
+            <svg class="icon">
+                <use href="/api/portfolio/assets/img/sprites.svg#icon-chevron" />
+            </svg>
+            <span class="title">More</span>
+        </button>
+        <div id="more-folders" hidden>
+            <button type="button" class="link" data-folder="all" aria-label="All Mail">
+                <svg class="icon" aria-hidden="true">
+                    <use href="/api/portfolio/assets/img/sprites.svg#icon-all-mail" />
+                </svg>
+                <span class="title">All Mail</span>
+            </button>
+            <button type="button" class="link" data-folder="archive" aria-label="Archive">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use
+                    href="/api/portfolio/assets/img/sprites.svg#archive" /></svg>
+                <span class="title">Archive</span>
+            </button>
+            <button type="button" class="link" data-folder="spam" aria-label="Spam">
+                <svg class="icon">
+                    <use href="/api/portfolio/assets/img/sprites.svg#icon-spam" />
+                </svg>
+                <span class="title">Spam</span>
+            </button>
+            <button type="button" class="link" data-folder="trash" aria-label="Trash">
+                <svg class="icon">
+                    <use href="/api/portfolio/assets/img/sprites.svg#icon-trash" />
+                </svg>
+                <span class="title">Trash</span>
+            </button>
+        </div>
+    </div>
+</aside>

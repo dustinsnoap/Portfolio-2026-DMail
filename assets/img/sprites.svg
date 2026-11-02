@@ -1,0 +1,391 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+
+  <!-- Logo -->
+  <symbol id="dmail-logo" viewBox="0 0 100 100">
+    <defs>
+      <clipPath id="dClip">
+        <path d="M50,78H16V100H55A20,25,0,0,0,55,0H16A11,11,0,0,0,16,22H50A22.5,27,0,0,1,50,78"/>
+      </clipPath>
+      <linearGradient id="blueGreen" gradientUnits="userSpaceOnUse" x1="50" y1="78" x2="66" y2="66">
+        <stop offset="0%" stop-color="#328afb" />
+        <stop offset="100%" stop-color="#15bd58" />
+      </linearGradient>
+      <linearGradient id="greenYellow" gradientUnits="userSpaceOnUse" x1="66" y1="66" x2="73" y2="50">
+        <stop offset="0%" stop-color="#15bd58" />
+        <stop offset="100%" stop-color="#f6c005" />
+      </linearGradient>
+      <linearGradient id="yellowOrange" gradientUnits="userSpaceOnUse" x1="73" y1="50" x2="65.5" y2="33.5">
+        <stop offset="0%" stop-color="#f6c005" />
+        <stop offset="100%" stop-color="#fc691c" />
+      </linearGradient>
+      <linearGradient id="orangeRed" gradientUnits="userSpaceOnUse" x1="65.5" y1="33.5" x2="50" y2="22">
+        <stop offset="0%" stop-color="#fc691c" />
+        <stop offset="100%" stop-color="#f93d35" />
+      </linearGradient>
+      <linearGradient id="redPink" gradientUnits="userSpaceOnUse" x1="50" y1="22" x2="16" y2="0">
+        <stop offset="0%" stop-color="#f93d35" />
+        <stop offset="100%" stop-color="#fd5d9a" />
+      </linearGradient>
+    </defs>
+    <path d="M5 11H27V78H5V11" fill="#EA4335" />
+    <g clip-path="url(#dClip)">
+      <path d="M16,100H60L50,78H16V100" fill="#328afb" />
+      <path d="M49,78L60,100L77,95L89,78L66.2,65.5L50,78" fill="url(#blueGreen)" />
+      <path d="M89,78L95,60L95,50L73,50L66,66L88,78" fill="url(#greenYellow)" />
+      <path d="M95,50L95,30L88.2,21L66.9,34L73,50L95,50" fill="url(#yellowOrange)" />
+      <path d="M59,0L49,22L67,34L89,22L76,5L60,0" fill="url(#orangeRed)" />
+      <path d="M60,0L50,22L5,22L5,0" fill="url(#redPink)" />
+    </g>
+    <path d="M5,78V89A11,11,0,0,0,27,89V78H5" fill="#EA4335" />
+  </symbol>
+
+  <!-- -Hamburger -->
+  <symbol id="icon-hamburger" viewBox="0 0 100 100">
+    <rect x="0" y="11.15" width="100" height="11.1" fill="var(--icon-ink, #ccc)"/>
+    <rect x="0" y="38.85" width="100" height="11.1" fill="var(--icon-ink, #ccc)"/>
+    <rect x="0" y="66.65" width="100" height="11.1" fill="var(--icon-ink, #ccc)"/>
+  </symbol>
+
+  <!-- Magnifying Glass -->
+  <symbol id="icon-search" viewBox="0 0 100 100">
+    <defs>
+      <mask id="magnifying-ring">
+        <rect width="100" height="100" fill="white" />
+        <circle cx="35" cy="35" r="25" fill="black" />
+      </mask>
+    </defs>
+    <circle cx="35" cy="35" r="35" fill="currentColor" mask="url(#magnifying-ring)" />
+    <path d="M53,53l4,-4l43,43l-8,8l-43,-43" fill="currentColor"/>
+  </symbol>
+
+  <!-- Settings / Filter Sliders -->
+  <symbol id="icon-settings" viewBox="0 0 100 100">
+    <path d="M0 17H50M61 17H100M61 0V33"></path>
+    <path d="M0 50H33M33 33V67M50 50H100"></path>
+    <path d="M0 83H61M61 67H100M72 83H100"></path>
+  </symbol>
+
+  <!-- Info / Question Mark -->
+  <symbol id="icon-info" viewBox="0 0 100 100">
+    <defs>
+      <mask id="question-mask">
+        <circle cx="50" cy="50" r="50" fill="white" />
+        <circle cx="50" cy="50" r="42" fill="black" />
+      </mask>
+    </defs>
+    <circle cx="50" cy="50" r="50" fill="var(--icon-ink, #ccc)" mask="url(#question-mask)"/>
+    <path d="M45,65H55C55,50,65,55,70,41A20,20,0,1,0,31,40H40A11,11,0,1,1,60,41C55,50,45,50,45,65V68H55V65" fill="var(--icon-ink, #ccc)"/>
+    <circle cx="50" cy="80" r="5" fill="var(--icon-ink, #ccc)"/>
+  </symbol>
+
+  <!-- Grid / Links (3x3 dots) -->
+  <symbol id="icon-grid" viewBox="0 0 100 100">
+    <defs><circle id="dot" r="8"/></defs>
+    <use href="#dot" x="25" y="25" />
+    <use href="#dot" x="50" y="25" />
+    <use href="#dot" x="75" y="25" />
+    <use href="#dot" x="25" y="50" />
+    <use href="#dot" x="50" y="50" />
+    <use href="#dot" x="75" y="50" />
+    <use href="#dot" x="25" y="75" />
+    <use href="#dot" x="50" y="75" />
+    <use href="#dot" x="75" y="75" />
+  </symbol>
+
+  <!-- FIX Compose / Pencil -->
+  <symbol id="icon-pencil" viewBox="0 0 100 100">
+    <path d="M0,75V100H25L100,25Q100,15,95,10L90,5Q85,0,75,0L0,75M8,92v-12l60,-60l12,12l-60,60" fill="var(--icon-ink, #333)" />
+  </symbol>
+
+  <!-- Sent -->
+  <symbol id="icon-sent" viewBox="0 0 100 100">
+    <path d="M0,9V91L100,50L0,9M10,76V63L30,50L10,37V24L74,50L10,76" fill="var(--icon-ink, #ccc)" />
+  </symbol>
+
+  <!-- Drafts / Document -->
+  <symbol id="icon-drafts" viewBox="0 0 100 100">
+    <path d="M60,0H17.5Q12.5,0,12.5,5V95Q12.5,100,17.5,100H82.5Q87.5,100,87.5,95V27.5L60,0M22.5,10H50V37.5H77.5V90H22.5V10" fill="var(--icon-ink, #ccc)" />
+  </symbol>
+
+  <!-- Chevron Down -->
+  <symbol id="icon-chevron" viewBox="0 0 100 100">
+    <path d="M0,29L8,21L50,63L92,21L100,29L50,79L0,29"/>
+  </symbol>
+
+  <!-- Spam / Octagon Warning -->
+  <symbol id="icon-spam" viewBox="0 0 100 100">
+    <path d="M29.289,0L70.711,0L100,29.289L100,70.711L70.711,100L29.289,100L0,70.711L0,29.289ZM33.431,10L10,33.431L10,66.569L33.431,90L66.569,90L90,66.569L90,33.431L66.569,10Z"/>
+    <path d="M50,20Q55,20,55,25V55Q55,60,50,60Q45,60,45,55V25Q45,20,50,20"/>
+    <circle cx="50" cy="75" r="5"/>
+  </symbol>
+
+  <!-- Trash -->
+  <symbol id="icon-trash" viewBox="0 0 100 100">
+    <path d="M63,0H37V10H7V23H17V90Q17,100,27,100H73Q83,100,83,90V23H93V10H63V0M30,23H70V89H30V23"/>
+    <path d="M37,33H47V79H37V33M53,33H63V79H53V33"/>
+  </symbol>
+
+  <!-- Checkbox -->
+  <symbol id="icon-checkbox-inactive" viewBox="0 0 100 100">
+    <path d="M10,0H90Q100,0,100,10V90Q100,100,90,100H10Q0,100,0,90V10Q0,0,10,0M12,12V88H88V12H12" fill="var(--icon-ink, #ccc)" />
+  </symbol>
+
+  <symbol id="icon-checkbox-semiactive" viewBox="0 0 100 100">
+    <path d="M10,0H90Q100,0,100,10V90Q100,100,90,100H10Q0,100,0,90V10Q0,0,10,0M12,12V88H88V12H12" fill="var(--icon-ink, #ccc)" />
+    <path d="M25,42.5h50v15h-50" fill="var(--icon-ink, #ccc)" />
+  </symbol>
+
+  <!-- Checkbox Checked -->
+  <symbol id="icon-checkbox-active" viewBox="0 0 100 100">
+    <path d="M10,0H90Q100,0,100,10V90Q100,100,90,100H10Q0,100,0,90V10Q0,0,10,0M12,12V88H88V12H12" fill="var(--icon-ink, #ccc)" />
+    <path d="M33,50l-10,10,20,20,40-40-10-10-30,30" fill="var(--icon-ink, #ccc)" />
+  </symbol>
+
+  <!-- Refresh -->
+  <symbol id="icon-refresh" viewBox="0 0 100 100">
+    <defs>
+      <mask id="refresh-cutout">
+        <rect width="100" height="100" fill="white" />
+        <circle cx="50" cy="50" r="37" fill="black" />
+        <rect x="85" y="44" width="15" height="12" fill="black" />
+      </mask>
+    </defs>
+    <circle cx="50" cy="50" r="50" fill="var(--icon-ink, #ccc)" mask="url(#refresh-cutout)" />
+    <path d="M100,0V44H55V32H88V0H100" fill="var(--icon-ink, #ccc)" />
+  </symbol>
+
+  <!-- Star -->
+  <symbol id="icon-star-inactive" viewBox="0 0 100 100">
+    <path d="M0,40l29,24,-11,33,32,-17,32,17,-11,-33,29,-24h-35l-15,-36,-15,36h-35M25,49h17l8,-19,8,19h17l-15,13,l5,15,-15,-7,-15,7,5,-15z"/>
+  </symbol>
+
+  <!-- Gold Star -->
+  <symbol id="icon-star-active" viewBox="0 0 100 100">
+    <path d="M0,40L29,64L18,97L50,80L82,97L71,64L100,40H65L50,4L35,40H0Z" />
+  </symbol>
+
+  <!-- More Options (vertical dots) -->
+  <symbol id="icon-options" viewBox="0 0 100 100">
+    <circle cx="50" cy="20" r="10"/>
+    <circle cx="50" cy="50" r="10"/>
+    <circle cx="50" cy="80" r="10"/>
+  </symbol>
+
+  <!-- Updates / Info Circle -->
+  <symbol id="icon-updates-inactive" viewBox="0 0 100 100">
+    <defs>
+      <mask id="updates-inactive-cutout">
+          <rect width="100" height="100" fill="white" />
+          <circle cx="50" cy="50" r="40" fill="black" />
+      </mask>
+    </defs>
+    <circle cx="50" cy="50" r="50" fill="var(--icon-ink, #ccc)" mask="url(#updates-inactive-cutout)" />
+    <circle cx="50" cy="25" r="5" fill="var(--icon-ink, #ccc)" />
+    <rect x="45" y="40" height="40" width="10" fill="var(--icon-ink, #ccc)" />
+  </symbol>
+
+  <symbol id="icon-updates-active" viewBox="0 0 100 100">
+  <defs>
+        <mask id="updates-active-cutout">
+            <rect width="100" height="100" fill="white" />
+            <circle cx="50" cy="25" r="5" fill="black" />
+            <rect x="45" y="40" width="10" height="40" fill="black" />
+        </mask>
+    </defs>
+    <circle cx="50" cy="50" r="50" fill="var(--icon-ink, #ccc)" mask="url(#updates-active-cutout)" />
+  </symbol>
+
+  <!-- Inbox / Open-->
+  <symbol id="icon-inbox-inactive" viewBox="0 0 100 100">
+    <path d="M0,50V90Q0,100,10,100H90Q100,100,100,90V10Q100,0,90,0H10Q0,0,0,10V50M12,12H88V56H64A14,14,0,0,1,36,56H12V12" fill="var(--icon-ink, #ccc)"/>
+  </symbol>
+
+  <!-- Inbox / Closed-->
+  <symbol id="icon-inbox-active" viewBox="0 0 100 100">
+    <path d="M0,50V90Q0,100,10,100H90Q100,100,100,90V10Q100,0,90,0H10Q0,0,0,10V50M12,12H88V56H64A14,14,0,0,1,36,56H12V12M12,63H31A5,3.5,0,0,0,69,63H88V88H12" fill="var(--icon-ink, #ccc)" />
+  </symbol>
+
+  <!-- Projects / Open Folder with list -->
+  <symbol id="icon-projects-active" viewBox="0 0 100 100">
+    <path d="M40,0H5Q0,0,0,5V30Q0,20,15,20H95Q95,10,85,10H50L40,0" fill="var(--icon-ink, #ccc)" />
+    <path d="M85,25V40H100L95.8,90Q95,100,85.8,100H10Q0,100,0,90L4.2,35Q5.4,25,14.2,25H85" fill="var(--icon-ink, #ccc)" />
+    <path d="M90,50h-45a4,4,0,0,0,0,8h40a4,4,0,0,0,0,-8M83,65h-40a4,4,0,0,0,0,8h35a4,4,0,0,0,0,-8M86,80h-45a4,4,0,0,0,0,8h40a4,4,0,0,0,0,-8" />
+    <path d="M25,63l8,-13a1.5,1.5,0,0,0,-3,-3l-5.5,9l-3,-3a1.5,1.5,0,0,0,-3,3" />
+    <path d="M23,79l8,-13a1.5,1.5,0,0,0,-3,-3l-5.5,9l-3,-3a1.5,1.5,0,0,0,-3,3" />
+    <path d="M21,94l8,-13a1.5,1.5,0,0,0,-3,-3l-5.5,9l-3,-3a1.5,1.5,0,0,0,-3,3" />
+  </symbol>
+
+  <!-- Projects / Closed Folder with list -->
+  <symbol id="icon-projects-inactive" viewBox="0 0 100 100">
+    <path d="M40,0H5Q0,0,0,5V30Q0,20,15,20H95Q95,10,85,10H50L40,0" fill="var(--icon-ink, #ccc)" />
+    <path d="M85,22.5H97.5L97.5,90Q97.5,100,85.8,100H10Q0,100,0,90L0,35Q0,22.5,15,22.5" fill="var(--icon-ink, #ccc)" />
+    <path d="M90,50h-50a4,4,0,0,0,0,8h40a4,4,0,0,0,0,-8M83,65h-43a4,4,0,0,0,0,8h35a4,4,0,0,0,0,-8M86,80h-46a4,4,0,0,0,0,8h40a4,4,0,0,0,0,-8" />
+    <path d="M20,63l8,-13a1.5,1.5,0,0,0,-3,-3l-5.5,9l-3,-3a1.5,1.5,0,0,0,-3,3" />
+    <path d="M20,79l8,-13a1.5,1.5,0,0,0,-3,-3l-5.5,9l-3,-3a1.5,1.5,0,0,0,-3,3" />
+    <path d="M20,94l8,-13a1.5,1.5,0,0,0,-3,-3l-5.5,9l-3,-3a1.5,1.5,0,0,0,-3,3" />
+  </symbol>
+
+  <!-- Articles / Folder with lines -->
+  <symbol id="icon-articles-inactive" viewBox="0 0 100 100">
+    <path d="M15,0H65L85,20V100H15V0M25,10V90H75V30H55V10H25" fill="var(--icon-ink, #ccc)" />
+    <rect x="35" y="40" width="25" height="8" fill="var(--icon-ink, #ccc)" />
+    <rect x="35" y="56" width="30" height="8" fill="var(--icon-ink, #ccc)" />
+    <rect x="35" y="74" width="20" height="8" fill="var(--icon-ink, #ccc)" />
+  </symbol>
+
+  <symbol id="icon-articles-active" viewBox="0 0 100 100">
+    <defs>
+        <mask id="articles-active-cutout">
+            <rect width="100" height="100" fill="white" />
+            <rect x="35" y="40" width="25" height="8" fill="black" />
+            <rect x="35" y="56" width="30" height="8" fill="black" />
+            <rect x="35" y="74" width="20" height="8" fill="black" />
+        </mask>
+    </defs>
+    <path d="M15,0H65L85,20V100H15V0" fill="var(--icon-ink, #ccc)" mask="url(#articles-active-cutout)" />
+  </symbol>
+
+  <symbol id="icon-arrow-curved" viewBox="0 0 100 100">
+    <path d="M0,35l25,-25h8v8l-17,17,17,17v8h-8"/>
+    <path d="M15,30h55q30,0,30,30v25h-10v-25q0,-20,-30,-20h-45"/>
+  </symbol>
+
+  <symbol id="icon-arrow" viewBox="0 0 100 100">
+    <path d="M0,50l30,-30h10v10l-20,20,20,20v10h-10M20,42.5h80v15h-80" fill="var(--icon-ink, #ccc)" />
+  </symbol>
+
+  <symbol id="icon-archive" viewBox="0 0 100 100">
+    <path d="M10,25h80l-10,-18h-60" fill="rgba(128,128,128,.5)" />
+    <path d="M0,25l15,-25h70l15,25v75h-100v-75M10,25h80l-10,-18h-60M8,33v59h84v-59" fill="var(--icon-ink, #ccc)" />
+    <path d="M45,45h10v20h15l-20,15,-20,-15h15" fill="var(--icon-ink, #ccc)" />
+  </symbol>
+
+  <symbol id="icon-unread" viewBox="0 0 100 100">
+    <defs>
+      <mask id="icon-unread-cutout">
+        <rect x="0" y="0" height="100" width="100" fill="white" />
+        <circle cx="87.5" cy="25" r="20" fill="black" />
+      </mask>
+      </defs>
+    <path d="M0,85v-55q0,-10,10,-10h80q10,0,10,10v55q0,10,-10,10h-80q-10,0,-10,-10M10,30l40,25,40,-25M10,85h80v-45l-40,25,-40,-25" mask="url(#icon-unread-cutout)"/>
+    <circle cx="87.5" cy="25" r="12.5"/>
+  </symbol>
+
+  <symbol id="icon-read" viewBox="0 0 100 100">
+    <path d="M0,35l50-35l50,35v60q0,5-5,5h-90q-5,0-5-5M10,45v40q0,5,5,5h70q5,0,5-5v-40l-40,20M15,36l35,18,35-18-35-23"/>
+  </symbol>
+
+  <symbol id="icon-all-mail" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="2">
+      <rect x="3" y="5" width="18" height="14" rx="1" />
+      <path d="m3 6 9 7 9-7" />
+    </g>
+  </symbol>
+
+  <!-- Archive and Restore -->
+  <symbol id="archive" viewBox="0 0 24 24">
+    <path fill="var(--icon-ink, #ccc)" d="M20 3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H4V8h16v11zM4 6V5h16v1H4zm7 3v3H8l4 4 4-4h-3V9h-2z"/>
+  </symbol>
+
+  <symbol id="restore" viewBox="0 0 24 24">
+    <path fill="var(--icon-ink, #ccc)" d="M20 3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H4V8h16v11zM4 6V5h16v1H4zm8 3-4 4h3v4h2v-4h3z"/>
+  </symbol>
+
+  <!-- Attachment / Paperclip -->
+  <symbol id="icon-attach" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round">
+    <path d="M35 50L65 20A15 15 0 0 1 86 41L44 83A22 22 0 0 1 13 52L55 10M27 65L65 27" />
+  </symbol>
+
+  <!-- Link -->
+  <symbol id="icon-link" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="10">
+    <path d="M40 30H28A20 20 0 0 0 28 70H40M60 30H72A20 20 0 0 1 72 70H60M30 50H70" />
+  </symbol>
+
+  <!-- Emoji / Smile -->
+  <symbol id="icon-emoji" viewBox="0 0 100 100" fill="currentColor" stroke="none">
+    <path d="M50 0A50 50 0 1 0 50 100A50 50 0 1 0 50 0M50 10A40 40 0 1 1 50 90A40 40 0 1 1 50 10" />
+    <circle cx="33" cy="38" r="6" /><circle cx="67" cy="38" r="6" />
+    <path d="M25 60Q50 90 75 60" fill="none" stroke="currentColor" stroke-width="8" />
+  </symbol>
+
+  <!-- Photo -->
+  <symbol id="icon-photo" viewBox="0 0 100 100" fill="currentColor" stroke="none">
+    <path d="M5 5H95V95H5ZM15 15V85H85V15Z" />
+    <circle cx="35" cy="35" r="8" />
+    <path d="M15 75L38 48L58 68L70 55L85 70V85H15Z" />
+  </symbol>
+
+  <!-- Help Me Write / Pencil and Sparkles -->
+  <symbol id="icon-write" viewBox="0 0 100 100" fill="currentColor" stroke="none">
+    <use href="#icon-pencil" x="5" y="20" width="70" height="70" />
+    <path d="M80 0L85 15L100 20L85 25L80 40L75 25L60 20L75 15ZM85 60L90 70L100 75L90 80L85 90L80 80L70 75L80 70Z" />
+  </symbol>
+
+  <!-- Settings / Gear -->
+  <symbol id="icon-gear" viewBox="0 0 100 100" fill="none"
+    stroke="currentColor" stroke-width="8" stroke-linejoin="round">
+    <path d="M40 4H60L64 18L76 25L90 23L96 40L85 50L96 60L90 77L76 75L64 82L60 96H40
+      L36 82L24 75L10 77L4 60L15 50L4 40L10 23L24 25L36 18Z" />
+    <circle cx="50" cy="50" r="18" />
+  </symbol>
+
+  <!-- Reading Pane -->
+  <symbol id="icon-reading-pane" viewBox="0 0 100 100" fill="currentColor" stroke="none">
+    <path d="M0 0H100V100H0ZM10 10V90H90V10ZM45 10H55V90H45ZM10 30H45V40H10ZM10 60H45V70H10Z" />
+  </symbol>
+
+  <!-- Keyboard -->
+  <symbol id="icon-keyboard" viewBox="0 0 100 100" preserveAspectRatio="none" fill="currentColor" stroke="none">
+    <path d="M0 0H100V100H0ZM8 8V92H92V8Z" />
+    <path d="M16 22H28V38H16ZM35 22H47V38H35ZM54 22H66V38H54ZM73 22H85V38H73Z" />
+    <path d="M16 48H28V64H16ZM35 48H47V64H35ZM54 48H66V64H54ZM73 48H85V64H73ZM25 75H75V86H25Z" />
+  </symbol>
+
+  <!-- Label -->
+  <symbol id="icon-label" viewBox="0 0 100 100" fill="currentColor" stroke="none">
+    <path d="M5 15H60L95 50L60 85H5Z" />
+  </symbol>
+
+  <!-- Expand -->
+  <symbol id="icon-expand" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="8">
+    <path d="M65 10H90V35M90 10L55 45M35 90H10V65M10 90L45 55" />
+  </symbol>
+
+  <!-- Message Sync Warning -->
+  <symbol id="icon-sync-warning" viewBox="0 0 100 100" fill="currentColor" stroke="none">
+    <path fill-rule="evenodd" d="M50 0L100 90H0ZM50 20L17 80H83Z" />
+    <path d="M45 35H55V58H45Z" /><circle cx="50" cy="69" r="5" />
+  </symbol>
+
+  <symbol id="icon-microphone" viewBox="0 0 100 100" fill="currentColor" stroke="none">
+    <rect x="30" y="0" width="40" height="56" rx="20"/>
+    <path d="M10 36h8v14a32 32 0 0 0 64 0V36h8v14a40 40 0 0 1-36 40v2h20v8H26v-8h20v-2a40 40 0 0 1-36-40z"/>
+  </symbol>
+
+  <!-- Cleanup / Magic Wand -->
+  <symbol id="icon-cleanup" viewBox="0 0 100 100" fill="currentColor" stroke="none">
+    <path d="M0 88L12 100L90 22L78 10Z"/>
+    <path d="M68 24L76 32L86 22L78 14Z" fill="white"/>
+    <path d="M38 0L43 15L58 20L43 25L38 40L33 25L18 20L33 15Z"/>
+    <path d="M88 48L91 57L100 60L91 63L88 72L85 63L76 60L85 57Z"/>
+  </symbol>
+
+  <!-- Undo -->
+  <symbol id="icon-undo" viewBox="0 0 100 100" fill="currentColor" stroke="none">
+    <path d="M0 30L30 0V20H55A45 40 0 0 1 55 100H45V86H55A31 26 0 0 0 55 34H30V60Z"/>
+  </symbol>
+
+  <!-- GitHub -->
+  <symbol id="icon-github" viewBox="0 0 100 100" fill="currentColor" stroke="none">
+    <defs>
+      <mask id="github-cutout">
+        <rect width="100" height="100" fill="white" />
+        <path d="M24 34Q21 27 24 20Q33 19 39 25Q50 22 61 25Q69 19 77 20Q80 28 77 34
+          Q82 40 82 49Q82 67 60 71H42Q20 68 20 49Q20 40 24 34Z" fill="black" />
+        <path d="M42 68H60Q66 73 65 83V100H38V83Q37 74 42 68Z" fill="black" />
+        <path d="M40 79Q29 86 25 78Q20 71 15 74Q12 77 17 78Q20 78 22 83Q28 92 39 88Z" fill="black" />
+      </mask>
+    </defs>
+    <circle cx="50" cy="50" r="50" mask="url(#github-cutout)" />
+  </symbol>
+</svg>

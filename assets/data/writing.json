@@ -1,0 +1,148 @@
+{
+    "emails": {
+        "demo-writing": {
+            "id": "demo-writing",
+            "threadId": "th-023",
+            "folder": "articles",
+            "timestamp": "2026-10-14T14:30:00Z",
+            "from": {
+                "name": "{{OWNER_NAME}}",
+                "email": "owner@example.invalid",
+                "avatar": "img/me.jpg"
+            },
+            "to": {
+                "name": "you",
+                "email": ""
+            },
+            "data": {
+                "subject": "A familiar interface leaves room for the work",
+                "format": "text",
+                "body": "A subject gives someone enough information to decide whether to open a conversation. A preview offers a little more. The rest can wait until they are interested.\n\nAn inbox gives projects and writing their own space without putting every explanation on the first screen. Familiar controls also leave less interface to explain.\n\nThis is sample writing. You can replace it in assets/data/writing.json.\n\n{{OWNER_NAME}}"
+            },
+            "status": {
+                "read": false,
+                "starred": false,
+                "deleted": false
+            },
+            "labels": [
+                "Design"
+            ]
+        },
+        "demo-writing-2": {
+            "id": "demo-writing-2",
+            "threadId": "th-023",
+            "folder": "articles",
+            "timestamp": "2026-10-15T14:30:00.000Z",
+            "from": {
+                "name": "{{OWNER_NAME}}",
+                "email": "owner@example.invalid",
+                "avatar": "img/me.jpg"
+            },
+            "to": {
+                "name": "you",
+                "email": ""
+            },
+            "data": {
+                "subject": "A familiar interface leaves room for the work",
+                "format": "text",
+                "body": "Start with the question\n\nA useful project description explains what needed to change before listing the tools. This is a sample second part in the same conversation.",
+                "summary": "A useful project description explains what needed to change before listing the tools. This is a sample second part in the same conversation."
+            },
+            "status": {
+                "read": false,
+                "starred": false,
+                "deleted": false
+            },
+            "labels": [
+                "Design"
+            ]
+        },
+        "demo-writing-3": {
+            "id": "demo-writing-3",
+            "threadId": "th-023",
+            "folder": "articles",
+            "timestamp": "2026-10-16T14:30:00.000Z",
+            "from": {
+                "name": "{{OWNER_NAME}}",
+                "email": "owner@example.invalid",
+                "avatar": "img/me.jpg"
+            },
+            "to": {
+                "name": "you",
+                "email": ""
+            },
+            "data": {
+                "subject": "A familiar interface leaves room for the work",
+                "format": "text",
+                "body": "Make room for decisions\n\nEach message can cover one decision without turning the inbox preview into the whole article. Open an earlier part to read it at your own pace.",
+                "summary": "Each message can cover one decision without turning the inbox preview into the whole article. Open an earlier part to read it at your own pace."
+            },
+            "status": {
+                "read": false,
+                "starred": false,
+                "deleted": false
+            },
+            "labels": [
+                "Design"
+            ]
+        },
+        "demo-writing-4": {
+            "id": "demo-writing-4",
+            "threadId": "th-023",
+            "folder": "articles",
+            "timestamp": "2026-10-17T14:30:00.000Z",
+            "from": {
+                "name": "{{OWNER_NAME}}",
+                "email": "owner@example.invalid",
+                "avatar": "img/me.jpg"
+            },
+            "to": {
+                "name": "you",
+                "email": ""
+            },
+            "data": {
+                "subject": "A familiar interface leaves room for the work",
+                "format": "text",
+                "body": "Keep the context\n\nConversation order preserves how an idea develops. Dates, labels, search and saved links still point to the same writing series.",
+                "summary": "Conversation order preserves how an idea develops. Dates, labels, search and saved links still point to the same writing series."
+            },
+            "status": {
+                "read": false,
+                "starred": false,
+                "deleted": false
+            },
+            "labels": [
+                "Design"
+            ]
+        },
+        "demo-writing-5": {
+            "id": "demo-writing-5",
+            "threadId": "th-023",
+            "folder": "articles",
+            "timestamp": "2026-10-18T14:30:00.000Z",
+            "from": {
+                "name": "{{OWNER_NAME}}",
+                "email": "owner@example.invalid",
+                "avatar": "img/me.jpg"
+            },
+            "to": {
+                "name": "you",
+                "email": ""
+            },
+            "data": {
+                "subject": "A familiar interface leaves room for the work",
+                "format": "text",
+                "body": "Leave a useful ending\n\nA finished thread gives the reader somewhere to stop. This sample fifth part also demonstrates the collapsed-history control.",
+                "summary": "A finished thread gives the reader somewhere to stop. This sample fifth part also demonstrates the collapsed-history control."
+            },
+            "status": {
+                "read": false,
+                "starred": false,
+                "deleted": false
+            },
+            "labels": [
+                "Design"
+            ]
+        }
+    }
+}

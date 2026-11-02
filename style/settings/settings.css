@@ -1,0 +1,404 @@
+.message-sender {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 32px;
+    margin-bottom: 8px;
+    color: #444746;
+}
+.message-sender input {
+    min-width: 0;
+    flex: 1;
+    background: transparent;
+    color: inherit;
+    border: none;
+    font: inherit;
+    padding: 6px 0;
+    outline-offset: 1px;
+    &:focus { outline: 1px solid #80868b; }
+}
+.message-sender input::placeholder { color: #757575; }
+@media (width < 800px) {
+    .message-sender input { font-size: max(16px, calc(14px * var(--text-scale, 1))); }
+    .message-sender { color: var(--gmail-ink); }
+    .message-sender input::placeholder { color: var(--gmail-muted); }
+}
+.settings-open .mailbox > :is(.top-bar, .mail-views, .mobile-heading) { display: none; }
+.settings-open :is(.mobile-compose, .mobile-bottom-bar) { display: none; }
+.settings-open .topbar { display: flex; }
+.settings-view {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+    min-width: 0;
+    font-size: calc(14px * var(--text-scale, 1));
+    color: #202124;
+    color-scheme: light;
+}
+.settings-view[hidden], .settings-view [role='tabpanel'][hidden] { display: none; }
+.settings-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 8px 16px;
+    min-height: 48px;
+    flex-shrink: 0;
+    color: var(--gmail-ink);
+    background: var(--gmail-surface);
+}
+.settings-heading h2 {
+    font-size: calc(22px * var(--text-scale, 1));
+    font-weight: 400;
+}
+.settings-view button {
+    font: inherit;
+    cursor: pointer;
+    padding: 6px 12px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    color: #202124;
+    background: #f1f3f4;
+}
+.settings-heading button {
+    color: inherit;
+    background: transparent;
+    border: none;
+}
+.settings-heading button:hover { background: color-mix(in srgb, currentColor 12%, transparent); }
+.settings-tabs {
+    display: flex;
+    flex-shrink: 0;
+    overflow-x: auto;
+    gap: 4px;
+    padding-inline: 16px;
+    background: #fff;
+    border-bottom: 1px solid #dadce0;
+}
+.settings-view .settings-tabs button {
+    flex-shrink: 0;
+    border: none;
+    border-radius: 0;
+    padding: 12px 8px;
+    background: none;
+    color: #5f6368;
+}
+.settings-view .settings-tabs [aria-selected='true'] {
+    color: var(--display-link, #0b57d0);
+    box-shadow: inset 0 -2px var(--display-link, #0b57d0);
+}
+.settings-body {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-wrap: anywhere;
+    padding: 0 24px 20px;
+    background: #f4f4f4;
+    scrollbar-gutter: stable;
+}
+.settings-view p {
+    margin: 8px 0;
+    line-height: 1.5;
+}
+.settings-intro {
+    color: #5f6368;
+    padding-block: 12px;
+}
+.settings-row {
+    display: grid;
+    grid-template-columns: minmax(140px, 20%) minmax(0, 1fr);
+    gap: 24px;
+    padding-block: 16px;
+    border-bottom: 1px solid #dedede;
+}
+.settings-row h3 {
+    font-size: inherit;
+    font-weight: 600;
+    margin: 4px 0 0;
+}
+.settings-row-content { min-width: 0; }
+.settings-row-content > :first-child { margin-top: 0; }
+.settings-row-content > :last-child { margin-bottom: 0; }
+.settings-view label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 0;
+}
+.settings-view input[type='checkbox'] { flex-shrink: 0; }
+.settings-view :is(select, input:not([type='checkbox'])) {
+    min-width: 0;
+    padding: 6px;
+    font: inherit;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    background: #fff;
+    color: #202124;
+}
+.settings-view :is(button, input, select):focus-visible {
+    outline: 2px solid var(--display-link, #0b57d0);
+    outline-offset: 2px;
+}
+.settings-view .label-error { color: #b3261e; }
+.settings-view .label-error:empty, .general-status:empty, .appearance-font-status:empty { display: none; }
+.settings-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding-top: 20px;
+}
+.settings-actions span {
+    font-size: calc(12px * var(--text-scale, 1));
+    color: #5f6368;
+}
+.settings-view :is([data-reset-general], [data-reset-appearance]) { margin-top: 16px; }
+.general-option { margin-bottom: 20px; }
+.general-option p {
+    margin-left: 22px;
+    color: #5f6368;
+}
+.settings-view .general-select {
+    display: grid;
+    grid-template-columns: auto minmax(0, 220px);
+    justify-content: start;
+    gap: 16px;
+}
+.general-select select { width: 100%; }
+.appearance-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px 24px;
+}
+.appearance-grid > label, .settings-row-content > label:has(select) {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    margin: 0;
+    max-width: 280px;
+}
+.appearance-grid select { width: 100%; }
+.appearance-color {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+}
+.appearance-color label {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 8px;
+    margin: 0;
+}
+.appearance-color label > span { grid-column: 1 / -1; }
+.appearance-color label input { grid-column: 1; }
+.appearance-color label output {
+    align-self: center;
+    font-size: calc(12px * var(--text-scale, 1));
+}
+.settings-view .appearance-color input[type='color'] {
+    width: 40px;
+    height: 40px;
+    padding: 2px;
+    cursor: pointer;
+}
+.appearance-color p {
+    grid-column: 1 / -1;
+    color: #5f6368;
+}
+.appearance-sample {
+    display: grid;
+    gap: 8px;
+}
+.appearance-sample span { color: #5f6368; }
+.appearance-sample .appearance-sample-button {
+    justify-self: start;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: var(--display-primary, #0b57d0);
+    color: var(--display-primary-ink, #fff);
+}
+.label-settings-list { margin-top: 16px; }
+.label-setting {
+    display: grid;
+    grid-template-columns: minmax(80px, 1fr) auto auto auto auto;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 0;
+    border-bottom: 1px solid #dedede;
+}
+.label-setting .topic-label {
+    justify-self: start;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: calc(12px * var(--text-scale, 1));
+}
+.settings-view .label-setting label {
+    margin: 0;
+    font-size: calc(12px * var(--text-scale, 1));
+    white-space: nowrap;
+}
+.settings-view .label-setting [data-remove] {
+    border: none;
+    background: none;
+    color: var(--display-link, #185abc);
+    padding: 6px 0;
+    font-size: calc(12px * var(--text-scale, 1));
+}
+.create-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+.create-label label {
+    flex: 1;
+    min-width: 0;
+}
+.create-label input { flex: 1; }
+@media (width < 1100px) {
+    .label-setting {
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 12px;
+    }
+    .label-setting .topic-label { grid-column: 1; }
+    .label-setting [data-remove] {
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: end;
+    }
+    .label-setting label:first-of-type { grid-column: 1 / -1; }
+}
+@media (width < 800px) {
+    .settings-body { padding-inline: 16px; }
+    .settings-row {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+    }
+    .settings-row h3 { margin: 0; }
+    .settings-view :is(button, input, select) { min-height: 44px; }
+    .settings-view input[type='checkbox'] { min-height: 0; }
+    .settings-view :is(select, input:not([type='checkbox'])) { font-size: max(16px, calc(14px * var(--text-scale, 1))); }
+    .settings-heading {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}
+@media (width < 600px) {
+    .appearance-grid { grid-template-columns: minmax(0, 1fr); }
+    .settings-view .general-select { grid-template-columns: minmax(0, 1fr); }
+    .create-label { flex-wrap: wrap; }
+    .create-label label {
+        flex-basis: 100%;
+        flex-wrap: wrap;
+    }
+    .create-label input { flex-basis: 100%; }
+    .settings-actions { flex-wrap: wrap; }
+}
+.quick-settings {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 320px;
+    min-width: 0;
+    margin: 0 0 16px 16px;
+    background: var(--gmail-surface);
+    color: var(--gmail-ink);
+    color-scheme: var(--gmail-color-scheme);
+    border: 1px solid var(--gmail-line);
+    border-radius: 16px;
+    overflow: hidden;
+    font-family: var(--display-font, Arial, Helvetica, sans-serif);
+    font-size: calc(14px * var(--text-scale, 1));
+}
+.quick-settings[hidden] { display: none; }
+.quick-settings-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 16px;
+}
+.quick-settings-heading h2 {
+    margin: 0;
+    font-size: calc(18px * var(--text-scale, 1));
+    font-weight: 400;
+}
+.quick-settings button {
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+.quick-settings-heading button {
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    font-size: 24px;
+}
+.quick-settings-heading button:hover { background: var(--navigation-hover); }
+.quick-settings .quick-settings-all {
+    margin: 0 16px 16px;
+    padding: 10px 16px;
+    border: 1px solid var(--gmail-line);
+    border-radius: 24px;
+    background: transparent;
+    color: var(--gmail-accent);
+    flex-shrink: 0;
+}
+.quick-settings-all:hover { background: var(--navigation-hover); }
+.quick-settings-body {
+    min-height: 0;
+    overflow-y: auto;
+    padding: 16px;
+    border-top: 1px solid var(--gmail-line);
+}
+.quick-settings-body > label {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+.quick-settings select {
+    width: 100%;
+    min-width: 0;
+    padding: 10px;
+    min-height: 44px;
+    border-radius: 6px;
+    border: 1px solid var(--gmail-line);
+    background: var(--gmail-surface);
+    color: var(--gmail-ink);
+    font: inherit;
+}
+.quick-settings :is(button, select):focus-visible {
+    outline: 2px solid var(--gmail-accent);
+    outline-offset: 2px;
+}
+.quick-settings p {
+    line-height: 1.5;
+    margin: 8px 0;
+}
+.quick-settings .quick-settings-note, .quick-settings .appearance-font-status {
+    color: var(--gmail-muted);
+    font-size: 12px;
+}
+.quick-settings .label-error { color: #f2b8b5; }
+:root[data-theme='light'] .quick-settings .label-error { color: #b3261e; }
+.quick-settings .label-error:empty, .quick-settings .appearance-font-status:empty { display: none; }
+.quick-settings-open .mailbox { min-width: 0; }
+@media (800px <= width < 1100px) {
+    .quick-settings {
+        position: absolute;
+        z-index: 25;
+        inset: 0 16px 16px auto;
+        width: 320px;
+        margin: 0;
+        box-shadow: 0 8px 24px #0005;
+    }
+}
+@media (width < 800px) {
+    .quick-settings { display: none; }
+}

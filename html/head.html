@@ -1,0 +1,18 @@
+<!-- Control what this page can load and connect to. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none';
+    script-src 'self' 'wasm-unsafe-eval'; worker-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self';
+    connect-src 'self' data: blob:; frame-src 'self' blob:; form-action 'self'" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dmail</title>
+<!-- PUBLIC_METADATA -->
+<meta name="description" content="A standalone inbox portfolio with sample conversations." />
+<!-- /PUBLIC_METADATA -->
+<link rel="icon" type="image/png" sizes="32x32" href="/api/portfolio/assets/img/favicon-32.png" />
+<script src="/script/settings/display.js"></script>
+<script src="/script/settings/theme.js"></script>
+<link rel="stylesheet" href="/style/main.css" />
+<script type="module" async src="/script/app/splash.js"></script>
+<link rel="preload" href="/api/portfolio/assets/data/emails.json" as="fetch" crossorigin />
+<link rel="preload" href="/api/portfolio/assets/data/writing.json" as="fetch" crossorigin />
+<script type="module" defer src="/script/main.js"></script>

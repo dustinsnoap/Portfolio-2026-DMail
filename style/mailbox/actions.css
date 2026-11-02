@@ -1,0 +1,332 @@
+.feature-dialog {
+    margin: auto;
+    width: min(440px, calc(100vw - 32px));
+    max-height: calc(100dvh - 32px);
+    overflow: auto;
+    border: none;
+    border-radius: 12px;
+    padding: 20px;
+    color: #202124;
+    background: white;
+    box-shadow: 0 8px 40px #0006;
+    font-size: calc(14px * var(--text-scale, 1));
+}
+.feature-dialog::backdrop { background: #0008; }
+.dialog-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+.dialog-heading h2 {
+    font-size: calc(18px * var(--text-scale, 1));
+    font-weight: 500;
+    overflow-wrap: anywhere;
+}
+.dialog-heading button {
+    flex-shrink: 0;
+    border: none;
+    background: none;
+    font-size: calc(24px * var(--text-scale, 1));
+    cursor: pointer;
+}
+.feature-dialog p {
+    margin: 8px 0;
+    color: #5f6368;
+}
+.feature-dialog label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 0;
+}
+.feature-dialog input:not([type="checkbox"]) {
+    min-width: 0;
+    flex: 1;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    padding: 6px;
+}
+.feature-dialog button:not(.dialog-heading button) {
+    padding: 6px 12px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    background: #f1f3f4;
+    color: #202124;
+    cursor: pointer;
+}
+.label-choices {
+    max-height: 250px;
+    overflow: auto;
+}
+.dialog-actions {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    margin-top: 16px;
+}
+.feature-dialog .label-error { color: #b3261e; }
+.topbar .portfolio-settings { color: #e8eaed; }
+.topbar .portfolio-settings svg {
+    width: 20px;
+    height: 20px;
+}
+.sidebar button:focus-visible, .topic-label button:focus-visible, .portfolio-settings:focus-visible {
+    outline: 2px solid #a8c7fa;
+    outline-offset: -2px;
+}
+.shortcuts-dialog dl {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 8px;
+}
+.shortcuts-dialog dt {
+    font-family: monospace;
+    font-weight: bold;
+}
+.file-preview { width: min(900px, calc(100vw - 32px)); }
+.file-preview iframe {
+    display: block;
+    width: 100%;
+    height: min(70dvh, 650px);
+    border: 1px solid #dadce0;
+    margin-bottom: 12px;
+}
+.file-preview .preview-image {
+    max-width: 100%;
+    max-height: 70dvh;
+    object-fit: contain;
+    margin: 0 auto 12px;
+}
+@container (max-width: 512px) {
+    .mailbox .email-list .row-labels { display: none; }
+    .mailbox .email-list .attachment-indicator { display: none; }
+}
+@media (max-width: 900px) {
+    .mail-views[data-pane="right"] {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: minmax(150px, 42%) minmax(0, 1fr);
+    }
+    .sidebar:not(.collapsed) { width: 200px; }
+    .sidebar:not(.collapsed) .nav, .sidebar:not(.collapsed) .sidebar-labels { width: 200px; }
+    .sidebar:not(.collapsed) .nav .link { width: 192px; }
+}
+@media (max-width: 600px) {
+    .sidebar:not(.collapsed) { width: 72px; }
+    .sidebar:not(:hover) .sidebar-labels { display: none; }
+    .sidebar:not(.collapsed) .nav .link { width: 56px; }
+    .sidebar .nav .title, .sidebar .nav .unread-count { display: none; }
+    .sidebar:hover { width: 200px; }
+    .sidebar:not(.collapsed):hover .nav .link { width: 192px; }
+    .sidebar:hover .nav .title, .sidebar:hover .nav .unread-count { display: initial; }
+    .sidebar .compose .button { width: 56px; }
+    .sidebar .compose .button span { display: none; }
+    .mailbox { min-width: 0; }
+    .mail .thread { padding-inline: 10px; }
+    .mail .thread .thread-heading, .mail .thread .reply-form { margin-left: 0; }
+    .mail .thread .thread-footer { padding-left: 0; }
+    .mail .thread .thread-stack .message {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas: "header" "body";
+    }
+    .mail .thread .thread-stack .message .avatar { display: none; }
+    .message-attachments { grid-column: 1; }
+}
+@container (max-width: 600px) {
+    .mailbox .top-bar .option-group .options .message-count { display: none; }
+    .mailbox .top-bar .option-group .options .option.square { width: 32px; }
+    .mailbox .top-bar .mailbox-controls .option { width: 40px; }
+}
+@container (max-width: 440px) {
+    .mailbox .top-bar .mailbox-controls .option { width: 32px; }
+    .mailbox .top-bar .option-group .options.selected { left: 44px; }
+    .mailbox .top-bar .option-group .options.selected .archive, .mailbox .top-bar .option-group .options.selected .spam, .mailbox .top-bar .option-group .options.selected .unread { display: none; }
+}
+.mailbox .top-bar .bulk-selection {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 56px;
+    flex-shrink: 0;
+}
+.mailbox .top-bar .bulk-selection .bulk-select {
+    width: 36px;
+    flex-shrink: 0;
+    padding: 0;
+}
+.mailbox .top-bar .select-options {
+    display: grid;
+    place-items: center;
+    border: 0;
+    background: transparent;
+    width: 20px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 4px;
+    color: var(--gmail-ink);
+    flex-shrink: 0;
+}
+.mailbox .top-bar .select-options:hover { background: var(--navigation-hover); }
+.mailbox .top-bar .select-options svg {
+    width: 8px;
+    height: 8px;
+    fill: var(--gmail-muted);
+}
+.mailbox .top-bar .bulk-selection .selection-menu {
+    position: absolute;
+    inset: 40px auto auto 0;
+    min-width: 170px;
+    max-width: calc(100vw - 32px);
+    z-index: 40;
+    background: var(--gmail-surface);
+    color: var(--gmail-ink);
+    padding: 6px 0;
+    border-radius: 4px;
+    box-shadow: 0 4px 14px #0006;
+    border: 1px solid var(--gmail-line);
+}
+.mailbox .top-bar .bulk-selection .selection-menu.hidden { display: none; }
+.mailbox .top-bar .selection-menu button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 10px 18px;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+.mailbox .top-bar .selection-menu button:hover { background: var(--navigation-hover); }
+.mailbox .top-bar .option-group .options.selected { left: 56px; }
+.mailbox .top-bar :is(.select-options, .selection-menu button):focus-visible {
+    outline: 2px solid var(--gmail-accent);
+    outline-offset: -2px;
+}
+.mail .thread-header .thread-action[hidden], .mailbox .top-bar .option-group .options .action[hidden] { display: none; }
+.forward-dialog {
+    width: min(560px, calc(100vw - 32px));
+    max-height: calc(100dvh - 32px);
+    overflow-y: auto;
+    background: var(--gmail-surface);
+    color: var(--gmail-ink);
+    border-color: var(--gmail-line);
+    font: calc(14px * var(--text-scale, 1))/1.5 var(--display-font, Arial, Helvetica, sans-serif);
+}
+.forward-dialog header, .forward-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+.forward-dialog h2 {
+    margin: 0;
+    font-size: calc(22px * var(--text-scale, 1));
+    font-weight: 400;
+}
+.forward-dialog .forward-subject {
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+.forward-dialog label {
+    display: grid;
+    gap: 8px;
+    margin: 16px 0;
+}
+.forward-dialog :is(input, textarea) {
+    width: 100%;
+    min-width: 0;
+    padding: 10px;
+    border: 1px solid var(--gmail-line);
+    border-radius: 6px;
+    background: var(--gmail-surface);
+    color: var(--gmail-ink);
+    font: inherit;
+}
+.forward-dialog textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+.forward-dialog pre {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    max-height: 180px;
+    overflow-y: auto;
+    font: inherit;
+}
+.forward-dialog p, .forward-dialog details {
+    margin: 12px 0;
+    color: var(--gmail-ink);
+}
+.forward-dialog .forward-status { color: #f2b8b5; }
+:root[data-theme='light'] .forward-dialog .forward-status { color: #b3261e; }
+.forward-dialog .forward-status:empty { display: none; }
+dialog.forward-dialog.feature-dialog button {
+    min-height: 40px;
+    color: var(--gmail-ink);
+    border-color: var(--gmail-line);
+    background: transparent;
+    font: inherit;
+}
+.forward-dialog.feature-dialog button[data-send-forward] {
+    background: var(--gmail-button);
+    color: var(--gmail-button-ink);
+    border-radius: 24px;
+}
+.forward-dialog button:disabled {
+    opacity: .5;
+    cursor: default;
+}
+.forward-dialog button[hidden] { display: none; }
+.forward-actions {
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+.forward-dialog :is(button, input, textarea, summary):focus-visible {
+    outline: 2px solid var(--gmail-accent);
+    outline-offset: 2px;
+}
+.consent-dialog .consent-check {
+    grid-template-columns: 22px 1fr;
+    align-items: start;
+}
+.consent-dialog .consent-check input {
+    width: 18px;
+    height: 18px;
+    margin-top: 3px;
+}
+.consent-dialog li {
+    overflow-wrap: anywhere;
+    margin: 12px 0;
+}
+.consent-subscriptions li {
+    display: grid;
+    gap: 4px;
+}
+.consent-subscriptions button { justify-self: start; }
+.account-panel .account-forwarding {
+    display: block;
+    margin: 0 auto 16px;
+    background: transparent;
+    border: 1px solid var(--gmail-line);
+    border-radius: 24px;
+    padding: 10px 18px;
+    color: var(--gmail-ink);
+    cursor: pointer;
+}
+.account-panel .account-forwarding[hidden] { display: none; }
+@media (width < 800px) {
+    .forward-dialog :is(input, textarea) { font-size: max(16px, calc(14px * var(--text-scale, 1))); }
+}
+@media (width < 800px) {
+    .mailbox .top-bar.has-selection .options.selected :is(.archive, .unread):not([hidden]) { display: flex; }
+    .mailbox .top-bar.has-selection .bulk-selection { display: none; }
+    .mailbox .top-bar.has-selection .mobile-selection-close { flex-shrink: 0; }
+    .mailbox .top-bar.has-selection .mobile-selection-count {
+        min-width: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

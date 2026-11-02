@@ -1,0 +1,177 @@
+:root {
+    --text-scale: 1;
+    --reading-line-height: 1.5;
+    --navigation-hover: #414141;
+}
+body {
+    font-family: var(--display-font, Arial, Helvetica, sans-serif);
+    font-size: calc(16px * var(--text-scale));
+}
+.about-panel, .message-editor {
+    font-family: var(--display-font, Arial, Helvetica, sans-serif);
+    font-size: calc(14px * var(--text-scale));
+}
+.mail .thread .thread-stack .message .message-body .message-content { line-height: var(--reading-line-height); }
+.mailbox .email-list .email .name {
+    height: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.mailbox .email-list .email { height: calc(40px * var(--text-scale)); }
+:root[data-density='compact'] .mailbox .email-list .email { height: calc(32px * var(--text-scale)); }
+:root[data-density='roomy'] .mailbox .email-list .email { height: calc(56px * var(--text-scale)); }
+:root[data-preview='false'] .mailbox .email-list .email .summary { display: none; }
+:root[data-primary='true'] .message-editor .editor-send,
+:root[data-primary='true'] .compose-window .compose-header .mobile-send {
+    background: var(--display-primary);
+    color: var(--display-primary-ink);
+}
+:root[data-primary='true'] .compose-window .compose-header .mobile-send svg { fill: var(--display-primary-ink); }
+:root[data-primary='true'] .message-editor .editor-send:hover:not(:disabled) {
+    background: var(--display-primary);
+    filter: brightness(.94);
+}
+:root[data-theme='light'] {
+    --icon-ink: var(--gmail-muted);
+    --navigation-hover: #e8eaed;
+}
+:root[data-theme='light'] .topbar :is(.logo span, .searchbox), :root[data-theme='light'] .sidebar :is(.link, .label-filter), :root[data-theme='light'] .mailbox :is(.tab, .name, .title, .message-count), :root[data-theme='light'] :is(.mailbox-controls, .labels-heading, .mobile-heading, .mobile-drawer-tools button) { color: var(--gmail-ink); }
+:root[data-theme='light'] .topbar .searchbar { background: #eaf1fb; }
+:root[data-theme='light'] .topbar .searchbar:focus-within { background: #fff; }
+:root[data-theme='light'] .topbar .searchbar .searchbox::placeholder { color: var(--gmail-muted); }
+:root[data-theme='light'] .topbar :is(.icon, .hamburger) { stroke: var(--gmail-muted); }
+:root[data-theme='light'] .topbar .links {
+    fill: var(--gmail-muted);
+    stroke: none;
+}
+:root[data-theme='light'] .topbar .portfolio-settings { color: var(--gmail-muted); }
+:root[data-theme='light'] .sidebar.collapsed { background: var(--gmail-canvas); }
+:root[data-theme='light'] :is(.mail-views .tray, .pane-empty) { background: var(--gmail-surface); }
+:root[data-theme='light'] .sidebar .nav .link.active, :root[data-theme='light'] .mobile-drawer-categories .link.active, :root[data-theme='light'] .sidebar .label-filter.active { background: #d3e3fd; }
+:root[data-theme='light'] .sidebar :is(.link:hover, .label-filter:hover, .mobile-drawer-tools button:hover) { background: #e8eaed; }
+.topbar .icon:hover, .topbar .links:hover, .topbar .topbar-left .menu-toggle:hover, .topbar .topbar-center .searchbar:focus-within .icon:hover { background: var(--navigation-hover); }
+.topbar .topbar-center .searchbar:focus-within .icon:hover { stroke: var(--gmail-muted); }
+:root[data-theme='light'] .mailbox .mail-categories .tab:hover { background: #e8eaed; }
+:root[data-theme='light'] .mailbox .mail-categories .tab.active::before { background: var(--gmail-accent); }
+:root[data-theme='light'] .mailbox .email-list .email { background: #f2f6fc; }
+:root[data-theme='light'] .mailbox .email-list .email.unread { background: #fff; }
+:root[data-theme='light'] .mailbox .email-list .email :is(.name, .title) { color: var(--gmail-ink); }
+:root[data-theme='light'] .mailbox .email-list .email :is(.summary, .timestamp), :root[data-theme='light'] .sidebar :is(small, .unread-count) { color: var(--gmail-muted); }
+:root[data-theme='light'] .mailbox :is(.option, .icon) svg, :root[data-theme='light'] .sidebar .nav .link .icon, :root[data-theme='light'] .mail .thread-header .thread-action svg { fill: var(--gmail-muted); }
+:root[data-theme='light'] .mail .thread-header .thread-action:hover { background: #e8eaed; }
+:root[data-theme='light'] .mailbox .email-list .star.starred svg.active { fill: #c58c00; }
+:root[data-theme='light'] .mailbox :is(.top-bar, .mail-categories), :root[data-theme='light'] .mail .thread-header { border-color: var(--gmail-line); }
+@container (max-width: 512px) {
+    .mailbox .email-list .email { height: auto !important; }
+    .mailbox .email-list .email :is(.title, .summary) {
+        height: auto;
+        line-height: 1.5;
+    }
+}
+@media (width < 800px) {
+    .mailbox .email-list .email {
+        min-height: calc(94px * var(--text-scale));
+        height: auto;
+    }
+    :root[data-density='compact'] .mailbox .email-list .email {
+        min-height: calc(80px * var(--text-scale));
+        padding-block: 7px;
+    }
+    :root[data-density='roomy'] .mailbox .email-list .email {
+        min-height: calc(116px * var(--text-scale));
+        padding-block: 22px;
+    }
+    .mailbox .email-list .email :is(.name, .title, .summary) {
+        height: auto;
+        line-height: 1.4;
+    }
+    :root[data-preview='false'] .mailbox .email-list .email {
+        grid-template-areas: 'avatar name timestamp' 'avatar title star';
+        min-height: calc(80px * var(--text-scale));
+    }
+    :root[data-theme='light'] :is(.sidebar, .mobile-bottom-bar, .mobile-search-panel, .mobile-search-open .topbar) {
+        background: var(--gmail-canvas);
+        color: var(--gmail-ink);
+    }
+    :root[data-theme='light'] :is(.mobile-drawer-categories .link, .mobile-drawer-header button, .mobile-bottom-bar button, .mobile-search-filters button) { color: var(--gmail-ink); }
+    :root[data-theme='light'] :is(.mobile-bottom-bar [data-mobile-mail] span, .mobile-search-history button) { background: #eaf1fb; }
+    :root[data-theme='light'] .mobile-search-history button {
+        color: var(--gmail-ink);
+        border-color: var(--gmail-canvas);
+    }
+    :root[data-theme='light'] .mail .thread .thread-subject, :root[data-theme='light'] .mail .thread .thread-stack .message .message-head .contacts .sender .name, :root[data-theme='light'] .mail .thread .thread-stack .message .message-body :is(.message-content, .message-summary) { color: var(--gmail-ink); }
+    :root[data-theme='light'] .mail .thread .thread-footer { background: var(--gmail-canvas); }
+    :root[data-theme='light'] .attachment-card {
+        background: #fff;
+        color: var(--gmail-ink);
+    }
+    :root[data-theme='light'] .attachment-card small { color: var(--gmail-muted); }
+    :root[data-theme='light'] :is(.compose-layer, .compose-layer .compose-window, .compose-window .compose-header,
+    .mail .thread .reply-form, .message-editor .editor-toolbar) {
+        background: #fff;
+        color: var(--gmail-ink);
+    }
+    :root[data-theme='light'] .compose-window :is(.compose-header h2, .compose-header button, .compose-address input, .compose-subject, .compose-from span) { color: var(--gmail-ink); }
+    :root[data-theme='light'] .message-editor .editor-body { color: var(--gmail-ink); }
+    :root[data-theme='light'] .message-editor :is(.editor-format, .editor-file) { background: #f1f3f4; }
+    :root[data-theme='light'] .message-editor :is(.editor-format select, .editor-select, .editor-color, .editor-file button) { color: var(--gmail-ink); }
+    :root[data-theme='light'] .message-editor .editor-file span { color: var(--gmail-accent); }
+    :root[data-theme='light'] .message-editor .editor-status { color: #5f6368; }
+    :root[data-theme='light'] .message-editor .editor-status[data-error='true'] { color: #b3261e; }
+    :root[data-theme='light'] .topbar .topbar-center .searchbar:focus-within .searchbox { color: var(--gmail-ink); }
+    :root[data-theme='light'] .topbar .topbar-center .searchbar:focus-within .searchbox::placeholder { color: var(--gmail-muted); }
+    :root[data-theme='light'] .topbar .topbar-center .searchbar:focus-within .icon { stroke: var(--gmail-muted); }
+    :root[data-theme='light'] .mailbox .top-bar.has-selection { background: var(--gmail-canvas); }
+    :root[data-theme='light'] .mobile-selection-count { color: var(--gmail-ink); }
+    :root[data-theme='light'] :is(.mobile-bottom-bar button, .mobile-drawer-categories) svg, :root[data-theme='light'] .mobile-selection-close svg { fill: var(--gmail-muted); }
+    :root[data-theme='light'] .mail .thread .thread-stack .message .message-head :is(.timestamp, .contacts .recipient) { color: var(--gmail-muted); }
+    :root[data-theme='light'] .mail .thread .thread-stack .message .message-head .actions .icon svg, :root[data-theme='light'] .mail .thread .thread-stack .message .message-head .actions .icon.star svg.inactive { fill: var(--gmail-muted); }
+    .search-options input, .search-options select { font-size: max(16px, calc(14px * var(--text-scale))); }
+}
+:root[data-accent='true'] .sidebar .nav .link.active,
+:root[data-accent='true'] .sidebar .label-filter.active,
+:root[data-accent='true'] .mobile-drawer-categories .link.active,
+:root[data-accent='true'] .mailbox .email-list .email.selected {
+    background: color-mix(in srgb, var(--display-accent) 22%, var(--gmail-surface));
+    color: var(--gmail-ink);
+}
+:root[data-accent='true'] .mailbox .mail-categories .tab.active::before { background: var(--display-accent); }
+:root[data-accent='true'] .mail .thread .message-body a, :root[data-accent='true'] .about-resume a, :root[data-accent='true'] .attachment-card button { color: var(--display-link); }
+:root[data-accent='true'] :is(button, input, select, textarea, .email):focus-visible { outline-color: var(--gmail-accent); }
+:root[data-accent='true'] input[type='checkbox'] { accent-color: var(--display-accent); }
+@media (width < 800px) {
+    :root[data-accent='true'] .mail .thread .message-body a, :root[data-accent='true'] .attachment-card button { color: var(--gmail-accent); }
+}
+:root[data-motion='reduced'] *, :root[data-motion='reduced'] *::before, :root[data-motion='reduced'] *::after {
+    transition-duration: .01ms !important;
+    transition-delay: 0s !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+}
+@media print {
+    :root {
+        --display-font: Arial, Helvetica, sans-serif !important;
+        --text-scale: 1 !important;
+        --gmail-accent: #0b57d0 !important;
+        --gmail-button: #c2e7ff !important;
+        --gmail-button-ink: #001d35 !important;
+    }
+}
+:root {
+    --compose-background: #f1f3f4;
+    --compose-ink: #3c4043;
+}
+:root[data-theme='light'] {
+    --compose-background: #c2e7ff;
+    --compose-ink: #001d35;
+}
+.sidebar .compose .button, .mobile-compose {
+    background: var(--compose-background);
+    color: var(--compose-ink);
+}
+.sidebar .compose .button .icon, .mobile-compose svg {
+    stroke: var(--compose-ink);
+    --icon-ink: var(--compose-ink);
+}

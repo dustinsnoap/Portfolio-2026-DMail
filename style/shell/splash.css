@@ -1,0 +1,53 @@
+.splash {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: grid;
+    place-items: center;
+    background: #000;
+    opacity: 1;
+    transition: opacity 240ms ease-out;
+    animation: splash-timeout 2100ms step-end forwards;
+}
+:root[data-theme='light'] .splash { background: #fff; }
+.splash-photo {
+    display: grid;
+    place-items: center;
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #7c98b3;
+    color: #101820;
+    font: 600 64px Arial, Helvetica, sans-serif;
+    opacity: 0;
+}
+.splash-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.splash[data-phase='portrait'] .splash-photo {
+    opacity: 1;
+    animation: splash-portrait-brighten 1000ms ease-out both;
+}
+.splash[data-phase='revealing'] {
+    opacity: 0;
+    pointer-events: none;
+}
+.splash[data-phase='revealing'] .splash-photo { opacity: 1; }
+@keyframes splash-portrait-brighten {
+    from { filter: brightness(0); }
+    to { filter: brightness(1); }
+}
+/* Reveal the page even if the splash controller never loads. */
+@keyframes splash-timeout {
+    to {
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
+:root[data-motion='reduced'] .splash { display: none; }
+@media (prefers-reduced-motion: reduce), print {
+    .splash { display: none; }
+}

@@ -1,0 +1,20 @@
+node_modules/
+__pycache__/
+.DS_Store
+Thumbs.db
+
+# Local content, documentation, checks, and generated evidence.
+/test/
+/data/
+/docs/
+/config/
+
+# Local overrides outside the bundled demo assets.
+/img/
+/resume/
+
+.env
+.env.*
+*.log
+/coverage/
+/dist/

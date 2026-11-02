@@ -1,0 +1,44 @@
+:root {
+    --gmail-color-scheme: dark;
+    --gmail-canvas: #000;
+    --gmail-surface: #2c2c2c;
+    --gmail-ink: #e8eaed;
+    --gmail-muted: #aaa;
+    --gmail-line: #5f6368;
+    --gmail-accent: #a8c7fa;
+    --gmail-button: #c2e7ff;
+    --gmail-button-ink: #001d35;
+    --gmail-hover: #d3edff;
+}
+:root[data-resume] { color-scheme: var(--gmail-color-scheme); }
+@media (width < 800px) {
+    :root:not([data-resume]) {
+        color-scheme: var(--gmail-color-scheme);
+        --gmail-canvas: #191919;
+        --gmail-surface: #0e0e0e;
+    }
+}
+:root[data-theme='light'], :root[data-resume-light='true'] {
+    --gmail-color-scheme: light;
+    --gmail-canvas: #f6f8fc;
+    --gmail-surface: #fff;
+    --gmail-ink: #1f1f1f;
+    --gmail-muted: #5f6368;
+    --gmail-line: #dadce0;
+    --gmail-accent: #0b57d0;
+    --gmail-button: #c2e7ff;
+    --gmail-button-ink: #001d35;
+    --gmail-hover: #b3d7ef;
+}
+@media print {
+    :root {
+        color-scheme: light;
+        --gmail-color-scheme: light;
+        --gmail-canvas: #fff;
+        --gmail-surface: #fff;
+        --gmail-ink: #1f1f1f;
+        --gmail-muted: #5f6368;
+        --gmail-line: #dadce0;
+        --gmail-accent: #0b57d0;
+    }
+}

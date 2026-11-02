@@ -1,0 +1,163 @@
+<section class="mailbox">
+    <section class="tray">
+        <div class="top-bar">
+            <div class="left option-group">
+                <div class="bulk-selection">
+                <button type="button" class="option bulk-select rect" aria-label="Select all conversations on this page"
+                    aria-pressed="false">
+                    <svg class="box">
+                        <use href="/api/portfolio/assets/img/sprites.svg#icon-checkbox-inactive" />
+                    </svg>
+                </button>
+                <button type="button" class="select-options" aria-label="Selection options" aria-haspopup="menu"
+                    aria-expanded="false" aria-controls="selection-menu"><svg class="arrow">
+                        <use href="/api/portfolio/assets/img/sprites.svg#icon-chevron" />
+                    </svg>
+                </button>
+                <div id="selection-menu" class="selection-menu more-menu hidden" role="menu" aria-label="Select conversations" inert>
+                    <button type="button" role="menuitem" data-select-conversations="all">All</button>
+                    <button type="button" role="menuitem" data-select-conversations="none">None</button>
+                    <button type="button" role="menuitem" data-select-conversations="read">Read</button>
+                    <button type="button" role="menuitem" data-select-conversations="unread">Unread</button>
+                    <button type="button" role="menuitem" data-select-conversations="starred">Starred</button>
+                    <button type="button" role="menuitem" data-select-conversations="unstarred">Unstarred</button>
+                </div></div>
+                <div class="options unselected">
+                    <button type="button" class="option refresh square" aria-label="Refresh" title="Refresh from cached messages">
+                        <svg>
+                            <use href="/api/portfolio/assets/img/sprites.svg#icon-refresh" />
+                        </svg>
+                    </button>
+                    <button type="button" class="option other square" aria-label="More actions" aria-haspopup="menu">
+                        <svg>
+                            <use href="/api/portfolio/assets/img/sprites.svg#icon-options" />
+                        </svg>
+                    </button>
+                    <div class="more-menu hidden">
+                        <div class="more-menu-options unselected">
+                            <button class="more-menu-item" data-mail-action="read-all">Mark all as read</button>
+                            <button class="more-menu-item" data-mail-action="unread-all">Mark all as unread</button>
+                        </div>
+                        <div class="more-menu-options selected">
+                            <button class="more-menu-item" data-mail-action="read">Mark selected as read</button>
+                            <button class="more-menu-item" data-mail-action="unread">Mark selected as unread</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="options selected">
+                    <button class="option action archive square" data-mail-action="archive" aria-label="Archive" title="Archive">
+                        <svg viewBox="0 0 24 24">
+                            <use href="/api/portfolio/assets/img/sprites.svg#archive" />
+                        </svg>
+                    </button>
+                    <button class="option action spam square" data-mail-action="spam" aria-label="Mark as spam">
+                        <svg>
+                            <use href="/api/portfolio/assets/img/sprites.svg#icon-spam" />
+                        </svg>
+                    </button>
+                    <button class="option action trash square" data-mail-action="trash" aria-label="Delete">
+                        <svg>
+                            <use href="/api/portfolio/assets/img/sprites.svg#icon-trash" />
+                        </svg>
+                    </button>
+                    <button type="button" class="option action restore square" data-mail-action="restore"
+                        aria-label="Restore conversation" title="Restore to original location" hidden>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <use href="/api/portfolio/assets/img/sprites.svg#archive" />
+                        </svg>
+                    </button>
+                    <button class="option action unread square" data-mail-action="unread" aria-label="Mark as unread">
+                        <svg>
+                            <use href="/api/portfolio/assets/img/sprites.svg#icon-unread" />
+                        </svg>
+                    </button>
+                    <button type="button" class="option action apply-labels square" aria-label="Apply labels" title="Apply labels">
+                        <svg aria-hidden="true"><use href="/api/portfolio/assets/img/sprites.svg#icon-label" /></svg>
+                    </button>
+                    <button type="button" class="option other square" aria-label="More actions" aria-haspopup="menu">
+                        <svg>
+                            <use href="/api/portfolio/assets/img/sprites.svg#icon-options" />
+                        </svg>
+                    </button>
+                    <div class="more-menu hidden">
+                        <div class="more-menu-options selected">
+                            <button class="more-menu-item" data-mail-action="read">Mark selected as read</button>
+                            <button class="more-menu-item" data-mail-action="unread">Mark selected as unread</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right option-group">
+                <div class="options">
+                    <span class="option message-count rect">1-50 of 1,416</span>
+                    <button class="option page prev square">
+                        <svg>
+                            <use href="/api/portfolio/assets/img/sprites.svg#icon-chevron" />
+                        </svg>
+                    </button>
+                    <button class="option page next active square">
+                        <svg>
+                            <use href="/api/portfolio/assets/img/sprites.svg#icon-chevron" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="mail-categories">
+            <a class="tab primary active" href="/#inbox" data-public-link>
+                <div class="icon">
+                    <svg>
+                        <use href="/api/portfolio/assets/img/sprites.svg#icon-inbox-active" />
+                    </svg>
+                </div>
+                <span class="title">Primary</span>
+            </a>
+            <a class="tab projects" href="/projects" data-public-link>
+                <div class="icon">
+                    <svg>
+                        <use href="/api/portfolio/assets/img/sprites.svg#icon-projects-inactive" />
+                    </svg>
+                </div>
+                <span class="title">Projects</span>
+            </a>
+            <a class="tab articles" href="/writing" data-public-link>
+                <div class="icon">
+                    <svg>
+                        <use href="/api/portfolio/assets/img/sprites.svg#icon-articles-inactive" />
+                    </svg>
+                </div>
+                <span class="title">Writing</span>
+            </a>
+            <a class="tab updates" href="/updates" data-public-link>
+                <div class="icon">
+                    <svg>
+                        <use href="/api/portfolio/assets/img/sprites.svg#icon-updates-inactive" />
+                    </svg>
+                </div>
+                <span class="title">Updates</span>
+            </a>
+        </div>
+
+        <div id="search-status" class="search-status" role="status" aria-live="polite" hidden></div>
+        <div class="email-list"></div>
+
+        <footer class="footer">
+            <button class="reading-progress" type="button" title="Open the next unexplored conversation" disabled>
+                <span class="bar" role="progressbar" aria-label="Portfolio reading progress"
+                    aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                    <span class="usage"></span>
+                </span>
+                <span class="text">0 conversations explored</span>
+            </button>
+            <div class="disclaimer">
+                <span>2026</span>
+                <span><a href="/about" data-about-link>{{OWNER_NAME}}</a></span>
+            </div>
+            <div class="activity">
+                <span data-last-activity>Last activity: just now</span>
+            </div>
+        </footer>
+    </section>
+    <section class="mail"></section>
+</section>
